@@ -50,7 +50,7 @@ export function generateMetadata(
       title,
       description,
       images: ['/og-image.jpg'],
-      creator: '@_etnography',
+      creator: '_etnography',
     },
     robots: {
       index: true,

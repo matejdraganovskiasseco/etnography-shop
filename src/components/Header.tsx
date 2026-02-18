@@ -4,12 +4,15 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { getTranslation } from '@/lib/i18n';
 import { useApp } from '@/lib/context';
-import { Search, Menu, X, Globe, DollarSign } from 'lucide-react';
+import { useAudio } from '@/contexts/AudioContext';
+import { Search, Menu, X, Globe, DollarSign, Volume2, VolumeX } from 'lucide-react';
 
 export function Header() {
   const { language, currency, setLanguage, setCurrency } = useApp();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+
+  const { isMuted, toggleMute, isPlaying } = useAudio();
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'mk' : 'en');
@@ -21,8 +24,9 @@ export function Header() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/catalog?search=${encodeURIComponent(searchQuery)}`;
+    const query = searchQuery.trim();
+    if (query) {
+      window.location.href = `/catalog?search=${encodeURIComponent(query)}`;
     }
   };
 
@@ -30,31 +34,22 @@ export function Header() {
     <header className="bg-card border-border border-b sticky top-0 z-50 relative overflow-hidden">
       {/* Macedonian Pattern Background */}
       <div className="absolute inset-0 opacity-10">
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="100%" 
-          height="100%" 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
           className="w-full h-full"
-          style={{
-            background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpattern id='macedonian-pattern' x='0' y='0' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Crect width='20' height='20' fill='%238B0000'/%3E%3Cpath d='M0 10 L10 0 L20 10 L10 20 Z' fill='%23000000'/%3E%3Cpath d='M0 0 L20 20' stroke='%23000000' stroke-width='0.5' fill='none'/%3E%3Cpath d='M5 0 L15 20' stroke='%238B0000' stroke-width='0.3' fill='none'/%3E%3Ccircle cx='5' cy='5' r='1' fill='%238B0000'/%3E%3Ccircle cx='15' cy='15' r='1' fill='%238B0000'/%3E%3C/pattern%3E%3Crect width='100' height='100' fill='url(%23macedonian-pattern)'/%3E%3C/svg%3E") repeat`
-          }}
         />
       </div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <img 
-              src="/logo.png" 
-              alt="Etnography Logo" 
-              className="h-10 w-10"
-            />
-            <span className="text-xl font-bold text-primary">
-              Etnography
-            </span>
+            <img src="/logo.png" alt="Etnography Logo" className="h-10 w-10" />
+            <span className="text-xl font-bold text-primary">Etnography</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -99,7 +94,7 @@ export function Header() {
             </div>
           </form>
 
-          {/* Language & Currency Toggles */}
+          {/* Language, Currency, Music */}
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={toggleLanguage}
@@ -108,6 +103,7 @@ export function Header() {
               <Globe className="h-4 w-4" />
               <span>{language.toUpperCase()}</span>
             </button>
+
             <button
               onClick={toggleCurrency}
               className="flex items-center space-x-1 px-3 py-2 text-sm border-border border rounded-lg hover:bg-muted transition-colors text-foreground"
@@ -115,10 +111,36 @@ export function Header() {
               <DollarSign className="h-4 w-4" />
               <span>{currency}</span>
             </button>
+
+            <button
+              onClick={toggleMute}
+              className="flex items-center space-x-1 px-3 py-2 text-sm border-border border rounded-lg hover:bg-muted transition-colors text-foreground"
+              aria-label={isMuted ? 'Unmute music' : 'Mute music'}
+              title={isMuted ? 'Unmute music' : 'Mute music'}
+            >
+              {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+              <span className="hidden lg:inline">
+                {isMuted
+                  ? language === 'en'
+                    ? 'Music Off'
+                    : 'Музика Искл.'
+                  : language === 'en'
+                    ? 'Music On'
+                    : 'Музика Вкл.'}
+              </span>
+            </button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleMute}
+              className="p-2 rounded-md text-foreground hover:bg-muted transition-colors"
+              aria-label={isMuted ? 'Unmute music' : 'Mute music'}
+            >
+              {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
+            </button>
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-md text-foreground hover:bg-muted transition-colors"
@@ -139,6 +161,7 @@ export function Header() {
               >
                 {getTranslation(language, 'nav.home')}
               </Link>
+
               <Link
                 href="/catalog"
                 className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-md transition-colors"
@@ -146,6 +169,7 @@ export function Header() {
               >
                 {getTranslation(language, 'nav.catalog')}
               </Link>
+
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-md transition-colors"
@@ -153,6 +177,7 @@ export function Header() {
               >
                 {getTranslation(language, 'nav.about')}
               </Link>
+
               <Link
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-md transition-colors"
@@ -160,7 +185,7 @@ export function Header() {
               >
                 {getTranslation(language, 'nav.contact')}
               </Link>
-              
+
               {/* Mobile Search */}
               <form onSubmit={handleSearch} className="px-3 py-2">
                 <div className="relative">
@@ -184,6 +209,7 @@ export function Header() {
                   <Globe className="h-4 w-4" />
                   <span>{language.toUpperCase()}</span>
                 </button>
+
                 <button
                   onClick={toggleCurrency}
                   className="w-full flex items-center justify-center space-x-1 px-3 py-2 text-sm border-border border rounded-lg hover:bg-muted transition-colors text-foreground"
@@ -191,6 +217,15 @@ export function Header() {
                   <DollarSign className="h-4 w-4" />
                   <span>{currency}</span>
                 </button>
+
+                {/* Hint if autoplay was blocked */}
+                {!isPlaying && (
+                  <p className="text-xs text-muted-foreground text-center">
+                    {language === 'en'
+                      ? 'Tap once to enable music (some browsers block autoplay).'
+                      : 'Кликни еднаш за музика (некои прелистувачи блокираат autoplay).'}
+                  </p>
+                )}
               </div>
             </div>
           </div>

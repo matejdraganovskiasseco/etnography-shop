@@ -238,7 +238,6 @@ For support, please contact:
 
 - Email: info@camerashop.com
 - Instagram: @camerashop
-- Phone: +389 123 456 78
 
 ## Performance Optimization
 

@@ -3,16 +3,7 @@
 import Link from 'next/link';
 import { getTranslation } from '@/lib/i18n';
 import { Instagram, Mail, Phone } from 'lucide-react';
-
-// Inline hook to bypass import issues
-function useApp() {
-  return {
-    language: 'en',
-    currency: 'EUR',
-    setLanguage: (lang: string) => console.log('Set language:', lang),
-    setCurrency: (curr: string) => console.log('Set currency:', curr)
-  };
-}
+import { useApp } from '@/lib/context';
 
 export function Footer() {
   const { language } = useApp();
@@ -24,7 +15,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-lg font-semibold mb-4">
-              Etnography
+              {getTranslation(language, 'about.title')}
             </h3>
             <p className="text-gray-300 mb-4">
               {language === 'en' 
@@ -42,7 +33,9 @@ export function Footer() {
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="mailto:info@etnography.com"
+                href="mailto:etnography35mk@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
               >
                 <Mail className="h-6 w-6" />
@@ -59,7 +52,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">
-              {language === 'en' ? 'Quick Links' : 'Брзи Врски'}
+              {getTranslation(language, 'footer.quickLinks')}
             </h4>
             <ul className="space-y-2">
               <li>
@@ -88,20 +81,16 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">
-              {language === 'en' ? 'Contact Info' : 'Контакт Информации'}
+              {getTranslation(language, 'footer.contactInfo')}
             </h4>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gray-300" />
-                <span className="text-gray-300">info@etnography.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-gray-300" />
-                <span className="text-gray-300">+389 123 456 78</span>
+                <span className="text-gray-300">etnography35mk@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Instagram className="h-4 w-4 text-gray-300" />
-                <span className="text-gray-300">@_etnography</span>
+                <span className="text-gray-300">_etnography</span>
               </div>
             </div>
           </div>
@@ -109,7 +98,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Etnography. {language === 'en' ? 'All rights reserved.' : 'Сите права се задржани.'}
+            © 2024 {getTranslation(language, 'about.title')}. {language === 'en' ? 'All rights reserved.' : 'Сите права се задржани.'}
           </p>
         </div>
       </div>

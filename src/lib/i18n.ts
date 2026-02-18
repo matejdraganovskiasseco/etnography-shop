@@ -14,8 +14,8 @@ export const translations: Record<Language, Translation> = {
       contact: 'Contact'
     },
     home: {
-      title: 'Professional Camera Shop',
-      subtitle: 'Discover premium analog and digital cameras, lenses, and accessories',
+      title: 'Etnography - Professional Photography Equipment',
+      subtitle: 'Discover premium analog and digital cameras, lenses, and accessories for professional and amateur photographers.',
       featured: 'Featured Products',
       viewAll: 'View All Products',
       shopNow: 'Shop Now'
@@ -34,6 +34,7 @@ export const translations: Record<Language, Translation> = {
         brand: 'Brand',
         category: 'Category',
         type: 'Type',
+        filmType: 'Film Type',
         mount: 'Mount',
         condition: 'Condition',
         priceRange: 'Price Range'
@@ -41,12 +42,20 @@ export const translations: Record<Language, Translation> = {
       categories: {
         camera: 'Cameras',
         lens: 'Lenses',
-        accessory: 'Accessories'
+        accessory: 'Accessories',
+        camcorder: 'Camcorders',
+        film: 'Film'
       },
       types: {
         film: 'Film',
         digital: 'Digital',
         both: 'Both'
+      },
+      filmTypes: {
+        mm35Color: '35mm Color',
+        mm35BW: '35mm Black & White',
+        mm120Color: '120 Color',
+        mm120BW: '120 Black & White'
       },
       conditions: {
         likeNew: 'Like New',
@@ -71,7 +80,17 @@ export const translations: Record<Language, Translation> = {
       mission: 'Our Mission',
       missionText: 'To make quality photography equipment accessible to everyone while preserving the art and craft of photography.',
       expertise: 'Our Expertise',
-      expertiseText: 'With over 15 years of experience in photography equipment, we carefully curate each item in our collection.'
+      expertiseText: 'With over 15 years of experience in photography equipment, we carefully curate each item in our collection.',
+      qualityAssurance: 'Quality Assurance',
+      qualityAssuranceText: 'Every item in our inventory undergoes rigorous testing and inspection to ensure it meets our high standards of quality and performance.',
+      ourStory: 'Our Story',
+      storyPart1: 'Founded in 2008, Etnography began as a small passion project by a group of photography enthusiasts who wanted to make quality camera equipment accessible to everyone in Macedonia.',
+      storyPart2: 'Over the years, we\'ve grown from a small local shop to a trusted destination for photographers across the region, known for our carefully curated selection, expert advice, and exceptional customer service.',
+      storyPart3: 'Today, we continue to serve both professional photographers and hobbyists, offering everything from vintage film cameras to the latest digital equipment, all backed by our commitment to quality and customer satisfaction.',
+      yearsExperience: 'Years Experience',
+      happyCustomers: 'Happy Customers',
+      productsSold: 'Products Sold',
+      brandsAvailable: 'Brands Available'
     },
     contact: {
       title: 'Contact Us',
@@ -82,7 +101,13 @@ export const translations: Record<Language, Translation> = {
       send: 'Send Message',
       instagram: 'Instagram',
       phone: 'Phone',
-      emailLabel: 'Email'
+      emailLabel: 'Email',
+      address: 'Address',
+      hours: 'Business Hours'
+    },
+    footer: {
+      quickLinks: 'Quick Links',
+      contactInfo: 'Contact Info'
     },
     common: {
       loading: 'Loading...',
@@ -105,8 +130,24 @@ export const translations: Record<Language, Translation> = {
       delete: 'Delete',
       confirm: 'Confirm',
       yes: 'Yes',
-      no: 'No'
-    }
+      no: 'No',
+      noResults: 'No products found',
+      addToCart: 'Add to Cart',
+      outOfStock: 'Out of Stock',
+      inStock: 'In Stock',
+      page: 'Page',
+      of: 'of',
+      items: 'items',
+      showing: 'Showing',
+      to: 'to',
+      sortBy: 'Sort by',
+      relevance: 'Relevance',
+      priceLowHigh: 'Price: Low to High',
+      priceHighLow: 'Price: High to Low',
+      newest: 'Newest',
+      oldest: 'Oldest',
+      clear: 'Clear'
+    },
   },
   mk: {
     nav: {
@@ -116,14 +157,14 @@ export const translations: Record<Language, Translation> = {
       contact: 'Контакт'
     },
     home: {
-      title: 'Професионална Фото Продавница',
-      subtitle: 'Откријте премиум аналогни и дигитални фотоапарати, обективи и додатоци',
-      featured: 'Избрани Производи',
+      title: 'Etnography - Професионална фотографска опрема',
+      subtitle: 'Откријте премиум аналогни и дигитални фотоапарати, објективи и додатоци за професионални и аматерски фотографи.',
+      featured: 'Проминирани производи',
       viewAll: 'Види сите производи',
       shopNow: 'Купи сега'
     },
     catalog: {
-      title: 'Каталог на Производи',
+      title: 'Каталог на производи',
       filters: 'Филтри',
       sortBy: 'Подреди по',
       priceLowHigh: 'Цена: Ниска кон Висока',
@@ -136,26 +177,35 @@ export const translations: Record<Language, Translation> = {
         brand: 'Бренд',
         category: 'Категорија',
         type: 'Тип',
+        filmType: 'Тип на филм',
         mount: 'Монт',
         condition: 'Состојба',
-        priceRange: 'Ценовен Опсег'
+        priceRange: 'Ценовен Ранг'
       },
       categories: {
         camera: 'Фотоапарати',
-        lens: 'Обективи',
-        accessory: 'Додатоци'
+        lens: 'Објективи',
+        accessory: 'Додатоци',
+        camcorder: 'Камкордери',
+        film: 'Филм'
       },
       types: {
         film: 'Филм',
-        digital: 'Дигитални',
-        both: 'Сите'
+        digital: 'Дигитално',
+        both: 'Двете'
+      },
+      filmTypes: {
+        mm35Color: '35mm во боја',
+        mm35BW: '35mm црно-бело',
+        mm120Color: '120 во боја',
+        mm120BW: '120 црно-бело'
       },
       conditions: {
-        likeNew: 'Како Нов',
+        likeNew: 'Како Ново',
         excellent: 'Одлично',
         veryGood: 'Многу Добро',
         good: 'Добро',
-        low: 'Ниско'
+        low: 'Слабо'
       }
     },
     product: {
@@ -173,7 +223,17 @@ export const translations: Record<Language, Translation> = {
       mission: 'Наша Мисија',
       missionText: 'Да направиме квалитетна фотографска опрема достапна за сите додека го зачувуваме уметноста и занаетот на фотографијата.',
       expertise: 'Нашето Знаење',
-      expertiseText: 'Со над 15 години искуство во фотографска опрема, внимателно курираме секој предмет во нашата колекција.'
+      expertiseText: 'Со над 15 години искуство во фотографска опрема, внимателно курираме секој предмет во нашата колекција.',
+      qualityAssurance: 'Гаранција на Квалитет',
+      qualityAssuranceText: 'Секој предмет во нашата инвентура поминува низ строги тестови и инспекции за да се осигура дека ги исполнува нашите високи стандарди за квалитет и перформанс.',
+      ourStory: 'Нашата Приказна',
+      storyPart1: 'Основана во 2008 година, Etnography започна како мал проект од група љубители на фотографија кои сакаа да го направат квалитетното фото опрема достапно за сите во Македонија.',
+      storyPart2: 'Over the years, we\'ve grown from a small local shop to a trusted destination for photographers across the region, known for our carefully curated selection, expert advice, and exceptional customer service.',
+      storyPart3: 'Today, we continue to serve both professional photographers and hobbyists, offering everything from vintage film cameras to the latest digital equipment, all backed by our commitment to quality and customer satisfaction.',
+      yearsExperience: 'Години Искуство',
+      happyCustomers: 'Задоволни Клиенти',
+      productsSold: 'Продадени Производи',
+      brandsAvailable: 'Достапни Брендови'
     },
     contact: {
       title: 'Контактирајте не',
@@ -184,7 +244,13 @@ export const translations: Record<Language, Translation> = {
       send: 'Испрати Порака',
       instagram: 'Инстаграм',
       phone: 'Телефон',
-      emailLabel: 'Е-пошта'
+      emailLabel: 'Е-пошта',
+      address: 'Адреса',
+      hours: 'Работно Време'
+    },
+    footer: {
+      quickLinks: 'Брзи Врски',
+      contactInfo: 'Контакт Информации'
     },
     common: {
       loading: 'Вчитување...',
@@ -207,7 +273,23 @@ export const translations: Record<Language, Translation> = {
       delete: 'Избриши',
       confirm: 'Потврди',
       yes: 'Да',
-      no: 'Не'
+      no: 'Не',
+      noResults: 'Не се пронајдени производи',
+      addToCart: 'Додај во кошничка',
+      outOfStock: 'Нема на залиха',
+      inStock: 'Достапно',
+      page: 'Страница',
+      of: 'од',
+      items: 'предмети',
+      showing: 'Прикажување',
+      to: 'до',
+      sortBy: 'Подреди по',
+      relevance: 'Релевантност',
+      priceLowHigh: 'Цена: Ниска до висока',
+      priceHighLow: 'Цена: Висока до ниска',
+      newest: 'Најново',
+      oldest: 'Најстаро',
+      clear: 'Исчисти'
     }
   }
 };

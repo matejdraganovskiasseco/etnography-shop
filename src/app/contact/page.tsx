@@ -42,16 +42,25 @@ export default function ContactPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-secondary to-black text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-secondary to-black text-white py-32 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-repeat" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='macedonian' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M20 5c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.15'/%3E%3Cpath d='M5 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.25'/%3E%3Cpath d='M35 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.2'/%3E%3Cpath d='M5 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.1'/%3E%3Cpath d='M35 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.15'/%3E%3Cpath d='M5 35c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.05'/%3E%3Cpath d='M35 35c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='80' height='80' fill='url(%23macedonian)'/%3E%3C/svg%3E")`,
+            //backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='macedonian' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M20 5c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.15'/%3E%3Cpath d='M5 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.25'/%3E%3Cpath d='M35 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.2'/%3E%3Cpath d='M5 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.1'/%3E%3Cpath d='M35 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.15'/%3E%3Cpath d='M5 35c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.05'/%3E%3Cpath d='M35 35c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='80' height='80' fill='url(%23macedonian)'/%3E%3C/svg%3E")`,
             backgroundSize: '80px 80px'
           }}></div>
         </div>
+
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-45">
+          <img 
+            src="/catalog-camera.jpg" 
+            alt="Etnography Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             {/* Logo as background element */}
             <div className="relative mb-8">
@@ -68,7 +77,7 @@ export default function ContactPage() {
             <h1 className="relative z-10 text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               Etnography
             </h1>
-            <p className="relative z-10 text-xl text-secondary max-w-3xl mx-auto drop-shadow">
+            <p className="relative z-10 text-xl text-white max-w-3xl mx-auto drop-shadow">
               {getTranslation(language, 'contact.description')}
             </p>
           </div>
@@ -161,14 +170,14 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 h-full">
               {/* Contact Details */}
-              <div className="bg-card p-8 rounded-lg shadow-md border border-border">
+              <div className="bg-card p-8 rounded-lg shadow-md border border-border h-full">
                 <h2 className="text-2xl font-bold text-foreground mb-6">
                   {language === 'en' ? 'Get in Touch' : 'Контактирајте не'}
                 </h2>
                 
-                <div className="space-y-6">
+                <div className="space-y-6 flex flex-col h-full">
                   <div className="flex items-start space-x-4">
                     <div className="bg-primary/10 rounded-full p-3">
                       <Mail className="h-6 w-6 text-primary" />
@@ -177,38 +186,12 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-foreground mb-1">
                         {getTranslation(language, 'contact.emailLabel')}
                       </h3>
-                      <p className="text-muted-foreground">info@etnography.com</p>
-                      <p className="text-muted-foreground">support@etnography.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 rounded-full p-3">
-                      <Phone className="h-6 w-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">
-                        {getTranslation(language, 'contact.phone')}
-                      </h3>
-                      <p className="text-muted-foreground">+389 123 456 78</p>
-                      <p className="text-muted-foreground">+389 234 567 89</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-purple-100 rounded-full p-3">
-                      <MapPin className="h-6 w-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">
-                        {language === 'en' ? 'Visit Us' : 'Посетете не'}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {language === 'en' 
-                          ? 'Makedonija Street 123<br />Skopje 1000, North Macedonia'
-                          : 'Улица Македонија 123<br />Скопје 1000, Северна Македонија'
-                        }
-                      </p>
+                      <a 
+                        href="mailto:etnography35mk@gmail.com"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        etnography35mk@gmail.com
+                      </a>
                     </div>
                   </div>
 
@@ -220,7 +203,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-foreground mb-1">
                         {getTranslation(language, 'contact.instagram')}
                       </h3>
-                      <p className="text-muted-foreground">@_etnography</p>
+                      <p className="text-muted-foreground">_etnography</p>
                       <a
                         href="https://ig.me/_etnography"
                         target="_blank"
@@ -237,38 +220,31 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
+                  
+                  <div className="flex-grow flex items-center justify-center relative pb-8">
+                    <div className="relative h-64 rounded-lg overflow-hidden">
+                      <img 
+                        src="/qr-background.jpg" 
+                        alt="QR Code Background" 
+                        className="w-full h-full object-cover opacity-20"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-center">
+                          <img 
+                            src="/qr-code.png" 
+                            alt="Etnography QR Code" 
+                            className="w-48 h-48 mx-auto mb-2"
+                          />
+                          <p className="text-sm text-muted-foreground">
+                            {language === 'en' ? 'Scan to contact us' : 'Скенирајте за контакт'}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Business Hours */}
-              <div className="bg-card p-8 rounded-lg shadow-md border border-border">
-                <h2 className="text-2xl font-bold text-foreground mb-6">
-                  {language === 'en' ? 'Business Hours' : 'Работно Време'}
-                </h2>
-                
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">
-                      {language === 'en' ? 'Monday - Friday' : 'Понеделник - Петок'}
-                    </span>
-                    <span className="font-medium text-foreground">09:00 - 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">
-                      {language === 'en' ? 'Saturday' : 'Сабота'}
-                    </span>
-                    <span className="font-medium text-foreground">10:00 - 16:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">
-                      {language === 'en' ? 'Sunday' : 'Недела'}
-                    </span>
-                    <span className="font-medium text-foreground">
-                      {language === 'en' ? 'Closed' : 'Затворено'}
-                    </span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

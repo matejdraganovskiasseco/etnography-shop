@@ -16,23 +16,31 @@ interface Product {
   };
   brand: string;
   category: string;
+  status?: 'available' | 'sold';
   condition: string;
-  priceEUR: number;
-  priceMKD: number;
+  priceEUR: number | null;
+  priceMKD: number | null;
+  description: {
+    en: string;
+    mk: string;
+  };
+  specs: Record<string, any>;
   images: string[];
 }
 
 interface ProductCardProps {
   product: Product;
+  showConditionBadge?: boolean;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, showConditionBadge = true }: ProductCardProps) {
   const { language, currency } = useApp();
 
   const price = currency === 'EUR' ? product.priceEUR : product.priceMKD;
-  const formattedPrice = formatPrice(price, currency);
+  const formattedPrice = formatPrice(price || 0, currency);
   const productName = product.name[language];
   const conditionText = getTranslation(language, `catalog.conditions.${product.condition.replace(' ', '')}`);
+  const isSold = product.status === 'sold';
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
@@ -46,8 +54,19 @@ export function ProductCard({ product }: ProductCardProps) {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          <div className="absolute top-2 right-2 bg-white bg-opacity-90 px-2 py-1 rounded text-xs font-medium">
-            {conditionText}
+          {showConditionBadge && (
+            <div className="absolute top-2 left-2 bg-white bg-opacity-90 px-2 py-1 rounded text-xs font-medium">
+              {conditionText}
+            </div>
+          )}
+          <div
+            className={`absolute top-2 right-2 px-2 py-1 rounded text-xs font-semibold ${
+              isSold
+                ? 'bg-red-600 text-white'
+                : 'bg-green-100 text-green-800'
+            }`}
+          >
+            {isSold ? 'SOLD' : 'AVAILABLE'}
           </div>
         </div>
       </Link>

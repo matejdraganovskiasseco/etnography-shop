@@ -26,12 +26,21 @@ export default function AboutPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-repeat" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='macedonian' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M20 5c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.15'/%3E%3Cpath d='M5 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.25'/%3E%3Cpath d='M35 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.2'/%3E%3Cpath d='M5 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.1'/%3E%3Cpath d='M35 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.05'/%3E%3Cpath d='M20 35c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='80' height='80' fill='url(%23macedonian)'/%3E%3C/svg%3E")`,
+            //backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='macedonian' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M20 5c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.15'/%3E%3Cpath d='M5 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.25'/%3E%3Cpath d='M35 15c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.2'/%3E%3Cpath d='M5 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.1'/%3E%3Cpath d='M35 25c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.05'/%3E%3Cpath d='M20 35c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2zm0 8c0-1.1-.9-2-2s-.9 2-2 2 .9 2 2 2-.9 2-2-2z' fill='%23A52A2A' fill-opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='80' height='80' fill='url(%23macedonian)'/%3E%3C/svg%3E")`,
             backgroundSize: '80px 80px'
           }}></div>
         </div>
+
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-45">
+          <img 
+            src="/catalog-camera.jpg" 
+            alt="Etnography Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             {/* Logo as background element */}
             <div className="relative mb-8">
@@ -46,9 +55,9 @@ export default function AboutPage() {
             </div>
             
             <h1 className="relative z-10 text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
-              Etnography
+              {getTranslation(language, 'about.title')}
             </h1>
-            <p className="relative z-10 text-xl text-secondary max-w-3xl mx-auto drop-shadow">
+            <p className="relative z-10 text-xl text-white max-w-3xl mx-auto drop-shadow">
               {getTranslation(language, 'about.description')}
             </p>
           </div>
@@ -91,13 +100,10 @@ export default function AboutPage() {
                 <Camera className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                {language === 'en' ? 'Quality Assurance' : 'Гаранција на Квалитет'}
+                {getTranslation(language, 'about.qualityAssurance')}
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                {language === 'en' 
-                  ? 'Every item in our inventory undergoes rigorous testing and inspection to ensure it meets our high standards of quality and performance.'
-                  : 'Секој предмет во нашата инвентура поминува низ строги тестови и инспекции за да се осигура дека ги исполнува нашите високи стандарди за квалитет и перформанс.'
-                }
+                {getTranslation(language, 'about.qualityAssuranceText')}
               </p>
             </div>
           </div>
@@ -107,26 +113,17 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-6">
-                  {language === 'en' ? 'Our Story' : 'Нашата Приказна'}
+                  {getTranslation(language, 'about.ourStory')}
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    {language === 'en' 
-                      ? 'Founded in 2008, Etnography began as a small passion project by a group of photography enthusiasts who wanted to make quality camera equipment accessible to everyone in Macedonia.'
-                      : 'Основана во 2008 година, Etnography започна како мал проект од група љубители на фотографија кои сакаа да го направат квалитетното фото опрема достапно за сите во Македонија.'
-                    }
+                    {getTranslation(language, 'about.storyPart1')}
                   </p>
                   <p>
-                    {language === 'en' 
-                      ? 'Over the years, we\'ve grown from a small local shop to a trusted destination for photographers across the region, known for our carefully curated selection, expert advice, and exceptional customer service.'
-                      : 'Со текот на годините, пораснавме од мала локална продавница до доверено одредиште за фотографи низ регионот, познати по нашата внимателно курирана селекција, експертски совети и исклучителна услуга за клиенти.'
-                    }
+                    {getTranslation(language, 'about.storyPart2')}
                   </p>
                   <p>
-                    {language === 'en' 
-                      ? 'Today, we continue to serve both professional photographers and hobbyists, offering everything from vintage film cameras to the latest digital equipment, all backed by our commitment to quality and customer satisfaction.'
-                      : 'Денес, продолжуваме да служиме на професионални фотографи и хобисти, нудеји се од vintage филмски фотоапарати до најновата дигитална опрема, сето тоа поддржано од нашата посветеност кон квалитет и задоволство на клиентите.'
-                    }
+                    {getTranslation(language, 'about.storyPart3')}
                   </p>
                 </div>
               </div>
@@ -135,25 +132,25 @@ export default function AboutPage() {
                   <div>
                     <div className="text-4xl font-bold text-primary mb-2">15+</div>
                     <div className="text-muted-foreground">
-                      {language === 'en' ? 'Years Experience' : 'Години Искуство'}
+                      {getTranslation(language, 'about.yearsExperience')}
                     </div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold text-primary mb-2">5000+</div>
                     <div className="text-muted-foreground">
-                      {language === 'en' ? 'Happy Customers' : 'Задоволни Клиенти'}
+                      {getTranslation(language, 'about.happyCustomers')}
                     </div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold text-primary mb-2">1000+</div>
                     <div className="text-muted-foreground">
-                      {language === 'en' ? 'Products Sold' : 'Продадени Производи'}
+                      {getTranslation(language, 'about.productsSold')}
                     </div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold text-primary mb-2">50+</div>
                     <div className="text-muted-foreground">
-                      {language === 'en' ? 'Brands Available' : 'Достапни Брендови'}
+                      {getTranslation(language, 'about.brandsAvailable')}
                     </div>
                   </div>
                 </div>

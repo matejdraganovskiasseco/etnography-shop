@@ -10,6 +10,32 @@ import { getTranslation } from '@/lib/i18n';
 import products from '@/data/products.json';
 import { ArrowRight, Filter, Search, X, ChevronDown } from 'lucide-react';
 
+type Product = {
+  id: number;
+  slug: string;
+  name: {
+    en: string;
+    mk: string;
+  };
+  brand: string;
+  category: string;
+  filmDigital: string;
+  filmType?: string;
+  status?: 'available' | 'sold';
+  mount: string;
+  condition: string;
+  priceEUR: number | null;
+  priceMKD: number | null;
+  description: {
+    en: string;
+    mk: string;
+  };
+  specs: Record<string, any>;
+  images: string[];
+};
+
+const allProducts = products as unknown as Product[];
+
 export default function CatalogPage() {
   const { language, currency } = useApp();
   const searchParams = useSearchParams();
@@ -18,17 +44,19 @@ export default function CatalogPage() {
     brand: '',
     category: '',
     filmDigital: '',
+    filmType: '',
     mount: '',
     condition: '',
     minPrice: '',
     maxPrice: '',
-    search: ''
+    search: '',
+    showSold: false
   });
   const [sortBy, setSortBy] = useState('newest');
 
   // Get unique values for filters
-  const uniqueBrands = useMemo(() => Array.from(new Set(products.map(p => p.brand))), []);
-  const uniqueMounts = useMemo(() => Array.from(new Set(products.map(p => p.mount).filter(m => m !== 'N/A'))), []);
+  const uniqueBrands = useMemo(() => Array.from(new Set(allProducts.map(p => p.brand))), []);
+  const uniqueMounts = useMemo(() => Array.from(new Set(allProducts.map(p => p.mount).filter(m => m !== 'N/A'))), []);
 
   // Initialize filters from URL params
   useEffect(() => {
@@ -38,18 +66,24 @@ export default function CatalogPage() {
 
   // Filter and sort products
   const filteredAndSortedProducts = useMemo(() => {
-    let filtered = products.filter(product => {
+    let filtered = allProducts.filter(product => {
       if (filters.search && !product.name[language].toLowerCase().includes(filters.search.toLowerCase()) && 
           !product.brand.toLowerCase().includes(filters.search.toLowerCase())) {
         return false;
       }
+
+      const isSold = product.status === 'sold';
+      if (!filters.showSold && isSold) return false;
+
+      const selectedPrice = currency === 'EUR' ? product.priceEUR : product.priceMKD;
       if (filters.brand && product.brand !== filters.brand) return false;
       if (filters.category && product.category !== filters.category) return false;
       if (filters.filmDigital && product.filmDigital !== filters.filmDigital) return false;
+      if (filters.filmType && product.filmType !== filters.filmType) return false;
       if (filters.mount && product.mount !== filters.mount) return false;
       if (filters.condition && product.condition !== filters.condition) return false;
-      if (filters.minPrice && (currency === 'EUR' ? product.priceEUR : product.priceMKD) < parseInt(filters.minPrice)) return false;
-      if (filters.maxPrice && (currency === 'EUR' ? product.priceEUR : product.priceMKD) > parseInt(filters.maxPrice)) return false;
+      if (filters.minPrice && selectedPrice !== null && selectedPrice < parseInt(filters.minPrice)) return false;
+      if (filters.maxPrice && selectedPrice !== null && selectedPrice > parseInt(filters.maxPrice)) return false;
       return true;
     });
 
@@ -57,9 +91,17 @@ export default function CatalogPage() {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'priceLowHigh':
-          return (currency === 'EUR' ? a.priceEUR : a.priceMKD) - (currency === 'EUR' ? b.priceEUR : b.priceMKD);
+          return (
+            (currency === 'EUR' ? a.priceEUR : a.priceMKD) ?? Number.POSITIVE_INFINITY
+          ) - (
+            (currency === 'EUR' ? b.priceEUR : b.priceMKD) ?? Number.POSITIVE_INFINITY
+          );
         case 'priceHighLow':
-          return (currency === 'EUR' ? b.priceEUR : b.priceMKD) - (currency === 'EUR' ? a.priceEUR : a.priceMKD);
+          return (
+            (currency === 'EUR' ? b.priceEUR : b.priceMKD) ?? Number.NEGATIVE_INFINITY
+          ) - (
+            (currency === 'EUR' ? a.priceEUR : a.priceMKD) ?? Number.NEGATIVE_INFINITY
+          );
         case 'oldest':
           return a.id - b.id;
         case 'newest':
@@ -72,7 +114,15 @@ export default function CatalogPage() {
   }, [filters, sortBy, currency, language]);
 
   const handleFilterChange = (key: string, value: string) => {
-    setFilters(prev => ({ ...prev, [key]: value }));
+    setFilters(prev => {
+      if (key === 'showSold') {
+        return { ...prev, showSold: value === 'true' };
+      }
+      if (key === 'category' && value !== 'film') {
+        return { ...prev, category: value, filmType: '' };
+      }
+      return { ...prev, [key]: value };
+    });
   };
 
   const clearFilters = () => {
@@ -80,11 +130,13 @@ export default function CatalogPage() {
       brand: '',
       category: '',
       filmDigital: '',
+      filmType: '',
       mount: '',
       condition: '',
       minPrice: '',
       maxPrice: '',
-      search: ''
+      search: '',
+      showSold: false
     });
   };
 
@@ -98,6 +150,20 @@ export default function CatalogPage() {
           className="text-sm text-gray-500 hover:text-primary transition-colors"
         >
           {getTranslation(language, 'catalog.clearFilters')}
+        </button>
+      </div>
+
+      <div className="mb-6">
+        <button
+          type="button"
+          onClick={() => handleFilterChange('showSold', filters.showSold ? '' : 'true')}
+          className={`w-full px-4 py-2 rounded-lg text-sm font-medium shadow-sm transition-colors ${
+            filters.showSold
+              ? 'bg-primary text-primary-foreground hover:bg-accent'
+              : 'bg-card text-foreground border border-border hover:bg-muted'
+          }`}
+        >
+          {language === 'en' ? 'Show sold' : 'Прикажи продадени'}
         </button>
       </div>
 
@@ -146,6 +212,7 @@ export default function CatalogPage() {
           <option value="camera">{getTranslation(language, 'catalog.categories.camera')}</option>
           <option value="lens">{getTranslation(language, 'catalog.categories.lens')}</option>
           <option value="accessory">{getTranslation(language, 'catalog.categories.accessory')}</option>
+          <option value="film">{getTranslation(language, 'catalog.categories.film')}</option>
         </select>
       </div>
 
@@ -166,22 +233,44 @@ export default function CatalogPage() {
         </select>
       </div>
 
+      {/* Film Type Filter */}
+      {filters.category === 'film' && (
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-foreground mb-2">
+            {getTranslation(language, 'catalog.filterBy.filmType')}
+          </label>
+          <select
+            value={filters.filmType}
+            onChange={(e) => handleFilterChange('filmType', e.target.value)}
+            className="w-full px-3 py-2 bg-input border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+          >
+            <option value="">{language === 'en' ? 'All Film Types' : 'Сите типови филм'}</option>
+            <option value="35mm-color">{getTranslation(language, 'catalog.filmTypes.mm35Color')}</option>
+            <option value="35mm-bw">{getTranslation(language, 'catalog.filmTypes.mm35BW')}</option>
+            <option value="120-color">{getTranslation(language, 'catalog.filmTypes.mm120Color')}</option>
+            <option value="120-bw">{getTranslation(language, 'catalog.filmTypes.mm120BW')}</option>
+          </select>
+        </div>
+      )}
+
       {/* Mount Filter */}
-      <div className="mb-6">
-        <label className="block text-sm font-medium text-foreground mb-2">
-          {getTranslation(language, 'catalog.filterBy.mount')}
-        </label>
-        <select
-          value={filters.mount}
-          onChange={(e) => handleFilterChange('mount', e.target.value)}
-          className="w-full px-3 py-2 bg-input border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
-        >
-          <option value="">{language === 'en' ? 'All Mounts' : 'Сите Монти'}</option>
-          {uniqueMounts.map(mount => (
-            <option key={mount} value={mount}>{mount}</option>
-          ))}
-        </select>
-      </div>
+      {filters.category === 'lens' && (
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-foreground mb-2">
+            {getTranslation(language, 'catalog.filterBy.mount')}
+          </label>
+          <select
+            value={filters.mount}
+            onChange={(e) => handleFilterChange('mount', e.target.value)}
+            className="w-full px-3 py-2 bg-input border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+          >
+            <option value="">{language === 'en' ? 'All Mounts' : 'Сите Монти'}</option>
+            {uniqueMounts.map(mount => (
+              <option key={mount} value={mount}>{mount}</option>
+            ))}
+          </select>
+        </div>
+      )}
 
       {/* Condition Filter */}
       <div className="mb-6">
@@ -307,7 +396,7 @@ export default function CatalogPage() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredAndSortedProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} showConditionBadge={false} />
                 ))}
               </div>
             )}

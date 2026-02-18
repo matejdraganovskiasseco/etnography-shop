@@ -8,6 +8,7 @@
     },
     "brand": "Polaroid",
     "category": "camera",
+    "status": "available",
     "filmDigital": "analog",
     "mount": "NA",
     "condition": "excellent",
@@ -25,7 +26,7 @@
     },
     "images": [
       "/products/DSC_0838-Photoroom.png",
-      "/products/DSC_0837-Photoroom.png",
+      "/products/DSC_0a837-Photoroom.png",
       "/products/DSC_0839-Photoroom.png",
       "/products/DSC_0840-Photoroom.png",
       "/products/DSC_0841-Photoroom.png"
@@ -40,6 +41,7 @@
     },
     "brand": "Nikon",
     "category": "camera",
+    "status": "available",
     "filmDigital": "film",
     "mount": "F",
     "condition": "good",
@@ -68,6 +70,7 @@
     },
     "brand": "Sony",
     "category": "lens",
+    "status": "available",
     "filmDigital": "digital",
     "mount": "E",
     "condition": "like-new",
@@ -97,6 +100,7 @@
     },
     "brand": "Leica",
     "category": "camera",
+    "status": "sold",
     "filmDigital": "film",
     "mount": "M",
     "condition": "excellent",
@@ -126,6 +130,7 @@
     },
     "brand": "Canon",
     "category": "lens",
+    "status": "available",
     "filmDigital": "digital",
     "mount": "EF",
     "condition": "good",
@@ -154,6 +159,7 @@
     },
     "brand": "Fujifilm",
     "category": "camera",
+    "status": "available",
     "filmDigital": "digital",
     "mount": "Fixed",
     "condition": "excellent",
@@ -182,6 +188,7 @@
     },
     "brand": "Nikon",
     "category": "lens",
+    "status": "available",
     "filmDigital": "digital",
     "mount": "F",
     "condition": "very-good",
@@ -211,6 +218,7 @@
     },
     "brand": "Olympus",
     "category": "camera",
+    "status": "available",
     "filmDigital": "film",
     "mount": "OM",
     "condition": "good",
@@ -238,6 +246,7 @@
     },
     "brand": "Manfrotto",
     "category": "accessory",
+    "status": "available",
     "filmDigital": "both",
     "mount": "N/A",
     "condition": "good",
@@ -266,6 +275,7 @@
     },
     "brand": "Pentax",
     "category": "camera",
+    "status": "available",
     "filmDigital": "film",
     "mount": "K",
     "condition": "excellent",
@@ -294,6 +304,7 @@
     },
     "brand": "Tamron",
     "category": "lens",
+    "status": "available",
     "filmDigital": "digital",
     "mount": "Canon EF",
     "condition": "very-good",
@@ -323,6 +334,7 @@
     },
     "brand": "Lowepro",
     "category": "accessory",
+    "status": "available",
     "filmDigital": "both",
     "mount": "N/A",
     "condition": "good",
@@ -339,7 +351,8 @@
       "weight": "2.8kg"
     },
     "images": [
-      "/products/lowepro-pro-trekker-1.jpg"
+      "/products/Lowepro-Pro-Trekker-400-AW-Camera-Backpack.webp",
+      "/products/Lowepro-Pro-Trekker-400-Pack-Jack.webp"
     ]
   },
   {
@@ -351,6 +364,7 @@
     },
     "brand": "Zenit",
     "category": "camera",
+    "status": "available",
     "filmDigital": "film",
     "mount": "M42",
     "condition": "good",
@@ -379,6 +393,7 @@
     },
     "brand": "FED",
     "category": "camera",
+    "status": "available",
     "filmDigital": "film",
     "mount": "M39",
     "condition": "very-good",
@@ -394,8 +409,7 @@
       "shutter": "1/500s - 1s + B"
     },
     "images": [
-      "/products/fed-5-1.jpg",
-      "/products/fed-5-2.jpg"
+      "/products/960x640x2.jpg"
     ]
   },
   {
@@ -407,6 +421,7 @@
     },
     "brand": "Hasselblad",
     "category": "camera",
+    "status": "sold",
     "filmDigital": "film",
     "mount": "V",
     "condition": "excellent",
@@ -436,6 +451,7 @@
     },
     "brand": "Contax",
     "category": "camera",
+    "status": "sold",
     "filmDigital": "film",
     "mount": "Fixed",
     "condition": "like-new",
@@ -464,6 +480,7 @@
     },
     "brand": "Helios",
     "category": "lens",
+    "status": "available",
     "filmDigital": "both",
     "mount": "M42",
     "condition": "excellent",
@@ -493,6 +510,7 @@
     },
     "brand": "Rollei",
     "category": "camera",
+    "status": "available",
     "filmDigital": "film",
     "mount": "Fixed",
     "condition": "excellent",
@@ -523,6 +541,7 @@
     },
     "brand": "Industar",
     "category": "lens",
+    "status": "available",
     "filmDigital": "both",
     "mount": "M42",
     "condition": "very-good",
@@ -551,6 +570,7 @@
     },
     "brand": "Yashica",
     "category": "camera",
+    "status": "available",
     "filmDigital": "film",
     "mount": "Contax/Yashica",
     "condition": "good",
@@ -570,5 +590,221 @@
       "/products/yashica-ys-90-1.jpg",
       "/products/yashica-ys-90-2.jpg"
     ]
+  },
+  {
+    "id": 21,
+    "slug": "kodak-portra-400-35mm",
+    "name": {
+      "en": "Kodak Portra 400 (35mm)",
+      "mk": "Kodak Portra 400 (35mm)"
+    },
+    "brand": "Kodak",
+    "category": "film",
+    "status": "available",
+    "filmDigital": "film",
+    "filmType": "35mm-color",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 18,
+    "priceMKD": 1100,
+    "description": {
+      "en": "Professional color negative film with natural skin tones and fine grain.",
+      "mk": "Професионален колор негатив филм со природни тонови на кожа и фина зрнестост."
+    },
+    "specs": {
+      "format": "35mm",
+      "iso": 400,
+      "type": "Color Negative"
+    },
+    "images": []
+  },
+  {
+    "id": 22,
+    "slug": "fuji-superia-400-35mm",
+    "name": {
+      "en": "Fujifilm Superia 400 (35mm)",
+      "mk": "Fujifilm Superia 400 (35mm)"
+    },
+    "brand": "Fujifilm",
+    "category": "film",
+    "status": "available",
+    "filmDigital": "film",
+    "filmType": "35mm-color",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 15,
+    "priceMKD": 950,
+    "description": {
+      "en": "Versatile color negative film with vibrant colors.",
+      "mk": "Универзален колор негатив филм со живи бои."
+    },
+    "specs": {
+      "format": "35mm",
+      "iso": 400,
+      "type": "Color Negative"
+    },
+    "images": []
+  },
+  {
+    "id": 23,
+    "slug": "ilford-hp5-plus-400-35mm",
+    "name": {
+      "en": "Ilford HP5 Plus 400 (35mm)",
+      "mk": "Ilford HP5 Plus 400 (35mm)"
+    },
+    "brand": "Ilford",
+    "category": "film",
+    "status": "available",
+    "filmDigital": "film",
+    "filmType": "35mm-bw",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 12,
+    "priceMKD": 750,
+    "description": {
+      "en": "Classic black and white film with wide exposure latitude.",
+      "mk": "Класичен црно-бел филм со широка толеранција на експозиција."
+    },
+    "specs": {
+      "format": "35mm",
+      "iso": 400,
+      "type": "Black & White"
+    },
+    "images": []
+  },
+  {
+    "id": 24,
+    "slug": "kodak-tri-x-400-35mm",
+    "name": {
+      "en": "Kodak TRI-X 400 (35mm)",
+      "mk": "Kodak TRI-X 400 (35mm)"
+    },
+    "brand": "Kodak",
+    "category": "film",
+    "status": "available",
+    "filmDigital": "film",
+    "filmType": "35mm-bw",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 13,
+    "priceMKD": 800,
+    "description": {
+      "en": "Legendary black and white film known for its contrast and grain.",
+      "mk": "Легендарен црно-бел филм познат по контраст и зрнестост."
+    },
+    "specs": {
+      "format": "35mm",
+      "iso": 400,
+      "type": "Black & White"
+    },
+    "images": []
+  },
+  {
+    "id": 25,
+    "slug": "kodak-portra-400-120",
+    "name": {
+      "en": "Kodak Portra 400 (120)",
+      "mk": "Kodak Portra 400 (120)"
+    },
+    "brand": "Kodak",
+    "category": "film",
+    "status": "available",
+    "filmDigital": "film",
+    "filmType": "120-color",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 11,
+    "priceMKD": 680,
+    "description": {
+      "en": "Medium format color negative film with fine grain and excellent dynamic range.",
+      "mk": "Средњеформатен колор негатив филм со фина зрнестост и одличен динамички опсег."
+    },
+    "specs": {
+      "format": "120",
+      "iso": 400,
+      "type": "Color Negative"
+    },
+    "images": []
+  },
+  {
+    "id": 26,
+    "slug": "fuji-pro-400h-120",
+    "name": {
+      "en": "Fujifilm Pro 400H (120)",
+      "mk": "Fujifilm Pro 400H (120)"
+    },
+    "brand": "Fujifilm",
+    "category": "film",
+    "status": "available",
+    "filmDigital": "film",
+    "filmType": "120-color",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 12,
+    "priceMKD": 740,
+    "description": {
+      "en": "Soft color palette medium format film, great for portraits.",
+      "mk": "Мек колор карактер средњеформатен филм, одличен за портрети."
+    },
+    "specs": {
+      "format": "120",
+      "iso": 400,
+      "type": "Color Negative"
+    },
+    "images": []
+  },
+  {
+    "id": 27,
+    "slug": "ilford-hp5-plus-400-120",
+    "name": {
+      "en": "Ilford HP5 Plus 400 (120)",
+      "mk": "Ilford HP5 Plus 400 (120)"
+    },
+    "brand": "Ilford",
+    "category": "film",
+    "status": "available",
+    "filmDigital": "film",
+    "filmType": "120-bw",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 9,
+    "priceMKD": 560,
+    "description": {
+      "en": "Flexible medium format black and white film with classic look.",
+      "mk": "Флексибилен средњеформатен црно-бел филм со класичен изглед."
+    },
+    "specs": {
+      "format": "120",
+      "iso": 400,
+      "type": "Black & White"
+    },
+    "images": ["/products/lford_HP5_Rollfilm.jpg"]
+  },
+  {
+    "id": 28,
+    "slug": "ilford-delta-100-120",
+    "name": {
+      "en": "Ilford Delta 100 (120)",
+      "mk": "Ilford Delta 100 (120)"
+    },
+    "brand": "Ilford",
+    "category": "film",
+    "status": "sold",
+    "filmDigital": "film",
+    "filmType": "120-bw",
+    "mount": "N/A",
+    "condition": "like-new",
+    "priceEUR": 9,
+    "priceMKD": 560,
+    "description": {
+      "en": "Fine grain medium format black and white film for high detail.",
+      "mk": "Средњеформатен црно-бел филм со фина зрнестост за високи детали."
+    },
+    "specs": {
+      "format": "120",
+      "iso": 100,
+      "type": "Black & White"
+    },
+    "images": ["/products/Ilford_Delta_100_Rollfilm.jpg"]
   }
 ]
