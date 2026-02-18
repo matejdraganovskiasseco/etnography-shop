@@ -1,0 +1,574 @@
+[
+  {
+  "id": 1,
+    "slug": "polaroid-supercolor-635-cl",
+    "name": {
+      "en": "Polaroid Supercolor 635 CL",
+      "mk": "Polaroid Supercolor 635 CL"
+    },
+    "brand": "Polaroid",
+    "category": "camera",
+    "filmDigital": "analog",
+    "mount": "NA",
+    "condition": "excellent",
+    "priceEUR": 57,
+    "priceMKD": 3500,
+    "description": {
+      "en": "Classic Polaroid instant camera in excellent condition. Easy to use with built-in flash, perfect for vintage photography lovers.",
+      "mk": "Класичен Polaroid инстант фотоапарат во одлична состојба. Лесен за користење со вграден блиц, совршен за љубители на винтиџ фотографија."
+    },
+    "specs": {
+      "filmType": "Polaroid 600",
+      "flash": "Built-in",
+      "focus": "Fixed focus",
+      "battery": "Integrated in film pack"
+    },
+    "images": [
+      "/products/DSC_0838-Photoroom.png",
+      "/products/DSC_0837-Photoroom.png",
+      "/products/DSC_0839-Photoroom.png",
+      "/products/DSC_0840-Photoroom.png",
+      "/products/DSC_0841-Photoroom.png"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "nikon-fm2",
+    "name": {
+      "en": "Nikon FM2",
+      "mk": "Nikon FM2"
+    },
+    "brand": "Nikon",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "F",
+    "condition": "good",
+    "priceEUR": 299,
+    "priceMKD": 18500,
+    "description": {
+      "en": "Classic mechanical film camera. Fully functional, light seals replaced. Perfect for film photography enthusiasts.",
+      "mk": "Класичен механички филмски фотоапарат. Потполно функционален, заменети светлинни заптивки. Идеален за љубители на филмска фотографија."
+    },
+    "specs": {
+      "type": "35mm Manual Focus SLR",
+      "shutter": "1/4000s - 1s + B",
+      "metering": "Center-weighted TTL"
+    },
+    "images": [
+      "/products/nikon-fm2-1.jpg",
+      "/products/nikon-fm2-2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "sony-fe-24-70mm-f28-gm",
+    "name": {
+      "en": "Sony FE 24-70mm f/2.8 GM",
+      "mk": "Sony FE 24-70mm f/2.8 GM"
+    },
+    "brand": "Sony",
+    "category": "lens",
+    "filmDigital": "digital",
+    "mount": "E",
+    "condition": "like-new",
+    "priceEUR": 1799,
+    "priceMKD": 111000,
+    "description": {
+      "en": "Professional standard zoom lens. Like new condition, includes original hood, caps, and case.",
+      "mk": "Професионален стандарден зум обектив. Како нов, вклучува оригинален сенче, капачиња и куфер."
+    },
+    "specs": {
+      "focalLength": "24-70mm",
+      "aperture": "f/2.8",
+      "elements": "18 elements in 13 groups",
+      "filter": "82mm"
+    },
+    "images": [
+      "/products/sony-24-70-gm-1.jpg",
+      "/products/sony-24-70-gm-2.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "leica-m6",
+    "name": {
+      "en": "Leica M6",
+      "mk": "Leica M6"
+    },
+    "brand": "Leica",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "M",
+    "condition": "excellent",
+    "priceEUR": 2499,
+    "priceMKD": 154000,
+    "description": {
+      "en": "Iconic rangefinder camera. Recently serviced, perfect working condition. A collector's dream.",
+      "mk": "Иконски рангефајндер фотоапарат. Неодамна сервисиран, во совршена работна состојба. Сон за колекционери."
+    },
+    "specs": {
+      "type": "35mm Rangefinder",
+      "viewfinder": "0.72x magnification",
+      "shutter": "1/1000s - 1s + B"
+    },
+    "images": [
+      "/products/leica-m6-1.jpg",
+      "/products/leica-m6-2.jpg",
+      "/products/leica-m6-3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "canon-ef-50mm-f18-stm",
+    "name": {
+      "en": "Canon EF 50mm f/1.8 STM",
+      "mk": "Canon EF 50mm f/1.8 STM"
+    },
+    "brand": "Canon",
+    "category": "lens",
+    "filmDigital": "digital",
+    "mount": "EF",
+    "condition": "good",
+    "priceEUR": 99,
+    "priceMKD": 6100,
+    "description": {
+      "en": "Compact and lightweight prime lens. Great for portraits and low light photography.",
+      "mk": "Компактен и лесен фикс обектив. Одличен за портрети и фотографија при слаба светлина."
+    },
+    "specs": {
+      "focalLength": "50mm",
+      "aperture": "f/1.8",
+      "elements": "6 elements in 5 groups",
+      "filter": "49mm"
+    },
+    "images": [
+      "/products/canon-50mm-stm-1.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "fuji-x100v",
+    "name": {
+      "en": "Fujifilm X100V",
+      "mk": "Fujifilm X100V"
+    },
+    "brand": "Fujifilm",
+    "category": "camera",
+    "filmDigital": "digital",
+    "mount": "Fixed",
+    "condition": "excellent",
+    "priceEUR": 1299,
+    "priceMKD": 80000,
+    "description": {
+      "en": "Premium compact camera with APS-C sensor. Excellent condition, includes original box and accessories.",
+      "mk": "Премиум компактен фотоапарат со APS-C сензор. Одлична состојба, вклучува оригинална кутија и додатоци."
+    },
+    "specs": {
+      "sensor": "APS-C 26.1MP X-Trans CMOS 4",
+      "lens": "23mm f/2 (35mm equivalent)",
+      "video": "4K at 30fps"
+    },
+    "images": [
+      "/products/fuji-x100v-1.jpg",
+      "/products/fuji-x100v-2.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "nikon-af-s-85mm-f14g",
+    "name": {
+      "en": "Nikon AF-S 85mm f/1.4G",
+      "mk": "Nikon AF-S 85mm f/1.4G"
+    },
+    "brand": "Nikon",
+    "category": "lens",
+    "filmDigital": "digital",
+    "mount": "F",
+    "condition": "very-good",
+    "priceEUR": 899,
+    "priceMKD": 55500,
+    "description": {
+      "en": "Professional portrait lens. Very good condition, includes original hood and caps.",
+      "mk": "Професионален портретен обектив. Многу добра состојба, вклучува оригинален сенче и капачиња."
+    },
+    "specs": {
+      "focalLength": "85mm",
+      "aperture": "f/1.4",
+      "elements": "10 elements in 9 groups",
+      "filter": "77mm"
+    },
+    "images": [
+      "/products/nikon-85mm-14g-1.jpg",
+      "/products/nikon-85mm-14g-2.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "olympus-om-10",
+    "name": {
+      "en": "Olympus OM-10",
+      "mk": "Olympus OM-10"
+    },
+    "brand": "Olympus",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "OM",
+    "condition": "good",
+    "priceEUR": 149,
+    "priceMKD": 9200,
+    "description": {
+      "en": "Classic 35mm film camera. Light seals replaced, fully functional. Great for beginners.",
+      "mk": "Класичен 35mm филмски фотоапарат. Заменети светлинни заптивки, потполно функционален. Одличен за почетници."
+    },
+    "specs": {
+      "type": "35mm Manual Focus SLR",
+      "shutter": "1/1000s - 2s + B",
+      "metering": "TTL OTF"
+    },
+    "images": [
+      "/products/olympus-om10-1.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "manfrotto-190xprob",
+    "name": {
+      "en": "Manfrotto 190XPROB",
+      "mk": "Manfrotto 190XPROB"
+    },
+    "brand": "Manfrotto",
+    "category": "accessory",
+    "filmDigital": "both",
+    "mount": "N/A",
+    "condition": "good",
+    "priceEUR": 199,
+    "priceMKD": 12300,
+    "description": {
+      "en": "Professional aluminum tripod. Includes quick release plate. Very stable and versatile.",
+      "mk": "Професионален алуминиумски статив. Вклучува брзо ослободувачка плоча. Многу стабилен и разновиден."
+    },
+    "specs": {
+      "material": "Aluminum",
+      "maxHeight": "146cm",
+      "maxLoad": "7kg",
+      "weight": "2.1kg"
+    },
+    "images": [
+      "/products/manfrotto-190xprob-1.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "pentax-k1000",
+    "name": {
+      "en": "Pentax K1000",
+      "mk": "Pentax K1000"
+    },
+    "brand": "Pentax",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "K",
+    "condition": "excellent",
+    "priceEUR": 249,
+    "priceMKD": 15400,
+    "description": {
+      "en": "Legendary student camera. Fully manual, built like a tank. Perfect for learning photography.",
+      "mk": "Легендарен студентски фотоапарат. Потполно рачен, изграден како тенк. Идеален за учење фотографија."
+    },
+    "specs": {
+      "type": "35mm Manual Focus SLR",
+      "shutter": "1/1000s - 1s + B",
+      "metering": "Match-needle TTL"
+    },
+    "images": [
+      "/products/pentax-k1000-1.jpg",
+      "/products/pentax-k1000-2.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "tamron-70-200mm-f28-di-vc-usd",
+    "name": {
+      "en": "Tamron 70-200mm f/2.8 Di VC USD",
+      "mk": "Tamron 70-200mm f/2.8 Di VC USD"
+    },
+    "brand": "Tamron",
+    "category": "lens",
+    "filmDigital": "digital",
+    "mount": "Canon EF",
+    "condition": "very-good",
+    "priceEUR": 799,
+    "priceMKD": 49300,
+    "description": {
+      "en": "Professional telephoto zoom lens with image stabilization. Very good condition, includes tripod collar.",
+      "mk": "Професионален телефото зум обектив со стабилизација на слика. Многу добра состојба, вклучува стативен прстен."
+    },
+    "specs": {
+      "focalLength": "70-200mm",
+      "aperture": "f/2.8",
+      "stabilization": "VC (Vibration Compensation)",
+      "filter": "77mm"
+    },
+    "images": [
+      "/products/tamron-70-200-28-1.jpg",
+      "/products/tamron-70-200-28-2.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "lowepro-pro-trekker-400aw",
+    "name": {
+      "en": "Lowepro Pro Trekker 400AW",
+      "mk": "Lowepro Pro Trekker 400AW"
+    },
+    "brand": "Lowepro",
+    "category": "accessory",
+    "filmDigital": "both",
+    "mount": "N/A",
+    "condition": "good",
+    "priceEUR": 149,
+    "priceMKD": 9200,
+    "description": {
+      "en": "Professional camera backpack. All-weather cover, comfortable for long hikes.",
+      "mk": "Професионална фото ранец. Покривка за сите временски услови, удобен за долги прошетки."
+    },
+    "specs": {
+      "capacity": "1 Pro DSLR + 4-6 lenses",
+      "laptop": "15-inch laptop compartment",
+      "dimensions": "32 x 46 x 24cm",
+      "weight": "2.8kg"
+    },
+    "images": [
+      "/products/lowepro-pro-trekker-1.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "zenit-et",
+    "name": {
+      "en": "Zenit ET",
+      "mk": "Зенит ЕТ"
+    },
+    "brand": "Zenit",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "M42",
+    "condition": "good",
+    "priceEUR": 89,
+    "priceMKD": 5500,
+    "description": {
+      "en": "Classic Soviet 35mm SLR camera. Fully functional, great for beginners in film photography.",
+      "mk": "Класичен советски 35mm SLR фотоапарат. Потполно функционален, одличен за почетници во филмска фотографија."
+    },
+    "specs": {
+      "type": "35mm Manual Focus SLR",
+      "shutter": "1/500s - 1/30s + B",
+      "metering": "Selenium meter"
+    },
+    "images": [
+      "/products/zenit-et-1.jpg",
+      "/products/zenit-et-2.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "fed-5",
+    "name": {
+      "en": "FED 5",
+      "mk": "ФЕД 5"
+    },
+    "brand": "FED",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "M39",
+    "condition": "very-good",
+    "priceEUR": 149,
+    "priceMKD": 9200,
+    "description": {
+      "en": "Soviet rangefinder camera based on Leica design. Excellent condition, recently serviced.",
+      "mk": "Советски рангефајндер фотоапарат базиран на Leica дизајн. Одлична состојба, неодамна сервисиран."
+    },
+    "specs": {
+      "type": "35mm Rangefinder",
+      "lens": "Industar-61 53mm f/2.8",
+      "shutter": "1/500s - 1s + B"
+    },
+    "images": [
+      "/products/fed-5-1.jpg",
+      "/products/fed-5-2.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "hasselblad-500c",
+    "name": {
+      "en": "Hasselblad 500C",
+      "mk": "Hasselblad 500C"
+    },
+    "brand": "Hasselblad",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "V",
+    "condition": "excellent",
+    "priceEUR": 1899,
+    "priceMKD": 117000,
+    "description": {
+      "en": "Iconic medium format camera. Excellent condition, includes Zeiss Planar 80mm f/2.8 lens.",
+      "mk": "Иконски средњеформатен фотоапарат. Одлична состојба, вклучува Zeiss Planar 80mm f/2.8 обектив."
+    },
+    "specs": {
+      "type": "Medium Format SLR",
+      "format": "6x6cm",
+      "lens": "Zeiss Planar 80mm f/2.8"
+    },
+    "images": [
+      "/products/hasselblad-500c-1.jpg",
+      "/products/hasselblad-500c-2.jpg",
+      "/products/hasselblad-500c-3.jpg"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "contax-t2",
+    "name": {
+      "en": "Contax T2",
+      "mk": "Contax T2"
+    },
+    "brand": "Contax",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "Fixed",
+    "condition": "like-new",
+    "priceEUR": 899,
+    "priceMKD": 55500,
+    "description": {
+      "en": "Premium compact film camera with Carl Zeiss lens. Like new condition, includes original box.",
+      "mk": "Премиум компактен филмски фотоапарат со Carl Zeiss обектив. Како нов, вклучува оригинална кутија."
+    },
+    "specs": {
+      "type": "35mm Point and Shoot",
+      "lens": "Carl Zeiss T* 38mm f/2.8",
+      "autofocus": "Active infrared"
+    },
+    "images": [
+      "/products/contax-t2-1.jpg",
+      "/products/contax-t2-2.jpg"
+    ]
+  },
+  {
+    "id": 17,
+    "slug": "m42-helios-44-2",
+    "name": {
+      "en": "Helios 44-2 58mm f/2",
+      "mk": "Хелиос 44-2 58mm f/2"
+    },
+    "brand": "Helios",
+    "category": "lens",
+    "filmDigital": "both",
+    "mount": "M42",
+    "condition": "excellent",
+    "priceEUR": 79,
+    "priceMKD": 4900,
+    "description": {
+      "en": "Classic Soviet portrait lens with unique swirly bokeh. Excellent condition, glass is perfect.",
+      "mk": "Класичен советски портретен обектив со уникатно вртежливо боке. Одлична состојба, стаклото е совршено."
+    },
+    "specs": {
+      "focalLength": "58mm",
+      "aperture": "f/2",
+      "elements": "6 elements in 4 groups",
+      "filter": "52mm"
+    },
+    "images": [
+      "/products/helios-44-2-1.jpg",
+      "/products/helios-44-2-2.jpg"
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "rolleiflex-2-8f",
+    "name": {
+      "en": "Rolleiflex 2.8F",
+      "mk": "Rolleiflex 2.8F"
+    },
+    "brand": "Rollei",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "Fixed",
+    "condition": "excellent",
+    "priceEUR": 1499,
+    "priceMKD": 92500,
+    "description": {
+      "en": "Twin-lens reflex medium format camera. Excellent condition, light meter working perfectly.",
+      "mk": "Двообјективен рефлекс средњеформатен фотоапарат. Одлична состојба, експонометарот работи совршено."
+    },
+    "specs": {
+      "type": "TLR Medium Format",
+      "format": "6x6cm",
+      "lens": "Zeiss Planar 80mm f/2.8",
+      "metering": "TTL selenium meter"
+    },
+    "images": [
+      "/products/rolleiflex-2-8f-1.jpg",
+      "/products/rolleiflex-2-8f-2.jpg",
+      "/products/rolleiflex-2-8f-3.jpg"
+    ]
+  },
+  {
+    "id": 19,
+    "slug": "industar-61-l-d",
+    "name": {
+      "en": "Industar 61 L/D 53mm f/2.8",
+      "mk": "Индустар 61 Л/Д 53mm f/2.8"
+    },
+    "brand": "Industar",
+    "category": "lens",
+    "filmDigital": "both",
+    "mount": "M42",
+    "condition": "very-good",
+    "priceEUR": 49,
+    "priceMKD": 3000,
+    "description": {
+      "en": "Soviet lens with radioactive glass element. Very good condition, sharp and contrasty.",
+      "mk": "Советски обектив со радиоактивно стаклен елемент. Многу добра состојба, остар и контрастен."
+    },
+    "specs": {
+      "focalLength": "53mm",
+      "aperture": "f/2.8",
+      "elements": "4 elements in 3 groups",
+      "filter": "49mm"
+    },
+    "images": [
+      "/products/industar-61-1.jpg"
+    ]
+  },
+  {
+    "id": 20,
+    "slug": "kyocera-ys-90",
+    "name": {
+      "en": "Kyocera Yashica YS-90",
+      "mk": "Kyocera Yashica YS-90"
+    },
+    "brand": "Yashica",
+    "category": "camera",
+    "filmDigital": "film",
+    "mount": "Contax/Yashica",
+    "condition": "good",
+    "priceEUR": 299,
+    "priceMKD": 18500,
+    "description": {
+      "en": "Professional SLR camera with Carl Zeiss lens compatibility. Good condition, fully functional.",
+      "mk": "Професионален SLR фотоапарат компатибилен со Carl Zeius обективи. Добра состојба, потполно функционален."
+    },
+    "specs": {
+      "type": "35mm SLR",
+      "shutter": "1/4000s - 30s + B",
+      "metering": "TTL center-weighted",
+      "mount": "Contax/Yashica C/Y"
+    },
+    "images": [
+      "/products/yashica-ys-90-1.jpg",
+      "/products/yashica-ys-90-2.jpg"
+    ]
+  }
+]
