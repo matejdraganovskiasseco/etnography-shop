@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ProductCard } from '@/components/ProductCard';
@@ -9,8 +8,6 @@ import { useApp } from '@/lib/context';
 import { getTranslation } from '@/lib/i18n';
 import products from '@/data/products.json';
 import { ArrowRight, Filter, Search, X, ChevronDown } from 'lucide-react';
-
-export const dynamic = 'force-dynamic';
 
 type Product = {
   id: number;
@@ -40,7 +37,6 @@ const allProducts = products as unknown as Product[];
 
 export default function CatalogPage() {
   const { language, currency } = useApp();
-  const searchParams = useSearchParams();
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filters, setFilters] = useState({
     brand: '',
@@ -62,9 +58,12 @@ export default function CatalogPage() {
 
   // Initialize filters from URL params
   useEffect(() => {
-    const search = searchParams.get('search') || '';
-    setFilters(prev => ({ ...prev, search }));
-  }, [searchParams]);
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const search = urlParams.get('search') || '';
+      setFilters(prev => ({ ...prev, search }));
+    }
+  }, []);
 
   // Filter and sort products
   const filteredAndSortedProducts = useMemo(() => {
