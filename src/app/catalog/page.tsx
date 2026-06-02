@@ -10,6 +10,8 @@ import { getTranslation } from '@/lib/i18n';
 import products from '@/data/products.json';
 import { ArrowRight, Filter, Search, X, ChevronDown } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 type Product = {
   id: number;
   slug: string;
