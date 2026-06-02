@@ -1,4 +1,14 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { useParams } from 'next/navigation';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { useApp } from '@/lib/context';
+import { getTranslation } from '@/lib/i18n';
+import { formatPrice } from '@/lib/utils';
 import products from '@/data/products.json';
+import { ArrowLeft, ChevronLeft, ChevronRight, Instagram, Mail } from 'lucide-react';
 
 type Product = {
   id: number;
@@ -19,23 +29,6 @@ type Product = {
 };
 
 const allProducts = products as unknown as Product[];
-
-export function generateStaticParams() {
-  return allProducts.map((product) => ({
-    slug: product.slug,
-  }));
-}
-
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
-import { useParams } from 'next/navigation';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { useApp } from '@/lib/context';
-import { getTranslation } from '@/lib/i18n';
-import { formatPrice } from '@/lib/utils';
-import { ArrowLeft, ChevronLeft, ChevronRight, Instagram, Mail } from 'lucide-react';
 
 export default function ProductPage() {
   const { language, currency } = useApp();
