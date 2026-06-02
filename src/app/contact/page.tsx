@@ -53,9 +53,9 @@ export default function ContactPage() {
 
         {/* Background Image */}
         <div className="absolute inset-0 opacity-45">
-          <img 
-            src="/catalog-camera.jpg" 
-            alt="Etnography Background" 
+          <img
+            src="/catalog-camera.JPG"
+            alt="Etnography Background"
             className="w-full h-full object-cover"
           />
         </div>
@@ -65,9 +65,9 @@ export default function ContactPage() {
             {/* Logo as background element */}
             <div className="relative mb-8">
               <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                <img 
-                  src="/logo.png" 
-                  alt="Etnography Logo Background" 
+                <img
+                  src="/Logo.png"
+                  alt="Etnography Logo Background"
                   className="w-96 h-96 object-contain"
                 />
               </div>

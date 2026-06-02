@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { getTranslation } from '@/lib/i18n';
 import { useApp } from '@/lib/context';
 import { useAudio } from '@/contexts/AudioContext';
@@ -9,6 +10,7 @@ import { Search, Menu, X, Globe, DollarSign, Volume2, VolumeX } from 'lucide-rea
 
 export function Header() {
   const { language, currency, setLanguage, setCurrency } = useApp();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -26,7 +28,7 @@ export function Header() {
     e.preventDefault();
     const query = searchQuery.trim();
     if (query) {
-      window.location.href = `/catalog?search=${encodeURIComponent(query)}`;
+      router.push(`/catalog?search=${encodeURIComponent(query)}`);
     }
   };
 
@@ -48,7 +50,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <img src="/logo.png" alt="Etnography Logo" className="h-10 w-10" />
+            <img src="/Logo.png" alt="Etnography Logo" className="h-10 w-10" />
             <span className="text-xl font-bold text-primary">Etnography</span>
           </Link>
 
