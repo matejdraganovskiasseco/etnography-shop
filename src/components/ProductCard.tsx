@@ -54,11 +54,11 @@ export function ProductCard({ product, showConditionBadge = true }: ProductCardP
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          {showConditionBadge && (
+          {/* {showConditionBadge && (
             <div className="absolute top-2 left-2 bg-white bg-opacity-90 px-2 py-1 rounded text-xs font-medium">
               {conditionText}
             </div>
-          )}
+          )} */}
           <div
             className={`absolute top-2 right-2 px-2 py-1 rounded text-xs font-semibold ${
               isSold

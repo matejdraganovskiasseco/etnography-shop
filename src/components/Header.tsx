@@ -17,11 +17,15 @@ export function Header() {
   const { isMuted, toggleMute, isPlaying } = useAudio();
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'mk' : 'en');
+    const newLang = language === 'en' ? 'mk' : 'en';
+    setLanguage(newLang);
+    setCurrency(newLang === 'en' ? 'EUR' : 'MKD');
   };
 
   const toggleCurrency = () => {
-    setCurrency(currency === 'EUR' ? 'MKD' : 'EUR');
+    const newCurrency = currency === 'EUR' ? 'MKD' : 'EUR';
+    setCurrency(newCurrency);
+    setLanguage(newCurrency === 'EUR' ? 'en' : 'mk');
   };
 
   const handleSearch = (e: React.FormEvent) => {
